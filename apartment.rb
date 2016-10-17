@@ -1,7 +1,8 @@
 require 'pry'
 
 class Apartment
-  attr_reader :rooms, :monthly_rent
+  attr_accessor :monthly_rent
+  attr_reader :rooms
 
   def initialize(args = {})
     @rooms = args.fetch(:rooms, [])
