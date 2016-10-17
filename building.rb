@@ -8,22 +8,15 @@ class Building
   end
 
   def total_room_count
-    room_count = 0
-    apartments.each do |apt|
-      room_count += apt.room_count
+    apartments.inject(0) do |sum, apt|
+      sum + apt.room_count
     end
-    room_count
   end
 
   def total_monthly_revenue
-    revenue = 0
-    apartments.each do |apt|
-      revenue += apt.monthly_rent
+    apartments.inject(0) do |sum, rent|
+      sum + rent.monthly_rent
     end
-    revenue
-    # apartments.reduce do |apt, n|
-    #   apt.monthly_rent + n
-    # end
   end
 
   def apartments_by_rent
@@ -39,11 +32,9 @@ class Building
   end
 
   def total_sqft
-    sqft = 0
-    apartments.each do |apt|
-      sqft += apt.total_sqft
+    apartments.inject(0) do |sum, apt|
+      sum + apt.total_sqft
     end
-    sqft
   end
 
 end
