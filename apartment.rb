@@ -4,7 +4,8 @@ class Apartment
 	attr_reader :monthly_rent, :rooms
 
 	def initialize (args = {})
-		@rooms = args.fetch(:rooms,[])
+		@number = args.fetch(:number,'')
+		@rooms = args.fetch(:rooms, [])
 		@monthly_rent = args.fetch(:monthly_rent, 1000)
 	end 
 
