@@ -1,5 +1,6 @@
 class Building
-   def initialize(args = {})
+  def initialize(args = {})
+   
     
   end
 end
