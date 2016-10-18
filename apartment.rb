@@ -1,3 +1,5 @@
+require_relative 'room'
+
 class Apartment
 	attr_accessor :rooms, :monthly_rent
 
@@ -17,10 +19,10 @@ class Apartment
 	end
 
 	def bedroom_count 
-		rooms.count {|room| room.name == "bedroom"}
+		rooms.count{|room| room.name == "bedroom"}
 	end
 
 	def total_sqft
-		rooms.reduce(0) {|total, room| total +rooms.sqft}
+		rooms.reduce(0){|total, room| total +rooms.sqft}
 	end
 end
