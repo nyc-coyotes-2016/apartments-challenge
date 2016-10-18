@@ -27,14 +27,14 @@ describe Apartment do
     end
   end
 
-
+  #
   describe 'sqft calculations' do
     describe '#total_sqft' do
       it 'return total sqft for all apartments' do
         expect(apartment.total_sqft).to eq 500
       end
     end
-
+  
     describe '#price_per_sqft' do
       it 'return price per sqft for apartment' do
         expect(apartment.price_per_sqft).to eq 2.9
@@ -56,5 +56,5 @@ describe Apartment do
       end
     end
   end
-
+#
 end
