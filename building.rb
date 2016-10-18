@@ -1,15 +1,22 @@
 class Building
 
-	attr_reader :address
-	attr_accessor :apartments, :total_room_count, :total_monthly_revenue, :total_sqft
+	attr_reader :address, :apartments
 
 	def initialize(args = {})
 		@address = args.fetch(:address, "")
 		@apartments = args.fetch(:apartments, Array.new)
+	end
 
-		@total_room_count = apartments.inject(0) { |total, apartment| total + apartment.room_count }
-		@total_monthly_revenue = apartments.inject(0) { |total, apartment| total + apartment.monthly_rent }
-		@total_sqft = apartments.inject(0) { |total, apartment| total + apartment.total_sqft }
+	def total_room_count
+		apartments.inject(0) { |total, apartment| total + apartment.room_count }
+	end
+
+	def total_monthly_revenue
+		apartments.inject(0) { |total, apartment| total + apartment.monthly_rent }
+	end
+
+	def total_sqft
+		apartments.inject(0) { |total, apartment| total + apartment.total_sqft }
 	end
 
 	def apartments_by_rent
