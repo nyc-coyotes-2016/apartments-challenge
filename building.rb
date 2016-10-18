@@ -10,15 +10,15 @@ class Building
 	end 
 
 	def total_room_count
-		apartments.rooms.size
+		apartments.inject(0) { |sum, apartment| sum + apartment.room_count }
 	end 
 
 	def total_monthly_revenue
-		apartments.inject(0) { |apartment, sum| apartment.monthly_rent + sum }
+		apartments.inject(0) { |sum, apartment| sum + apartment.monthly_rent }
 	end 
 
-	def apartments_by_rent 
-		apartments.sort_by { |monthly_rent| apartment.monthly_rent }.reverse
+	def apartments_by_rent
+		apartments.sort { |a, b| a.monthly_rent <=> b.monthly_rent }.reverse
 	end 
 
 	def find_apartments_by_bedroom_count(num_of_bedrooms)
@@ -26,10 +26,13 @@ class Building
 	end 
 
 	def total_sqft 
-		apartments.rooms.inject(0) { |room, sum| room.sqft + sum }
+		apartments.inject(0) { |sum, apartment| sum + apartment.total_sqft }
 	end 
 
 end
+
+
+
 
 
 
