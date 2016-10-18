@@ -42,19 +42,19 @@ describe Building do
       expect(building.apartments_by_rent).to eq [first_apartment, third_apartment, second_apartment]
     end
   end
-  #
-  # describe '#find_apartments_by_bedroom_count' do
-  #   it 'should find apartment by input number of bedroom' do
-  #     expect(building.find_apartments_by_bedroom_count(1)). to eq second_apartment
-  #   end
-  # end
-  #
-  #
-  # describe '#total_sqft' do
-  #   it 'returns total sqft for all apartments in the building' do
-  #     expect(building.total_sqft).to eq 2160
-  #   end
-  # end
+  
+  describe '#find_apartments_by_bedroom_count' do
+    it 'should find apartment by input number of bedroom' do
+      expect(building.find_apartments_by_bedroom_count(1)). to eq second_apartment
+    end
+  end
+
+
+  describe '#total_sqft' do
+    it 'returns total sqft for all apartments in the building' do
+      expect(building.total_sqft).to eq 2160
+    end
+  end
 
 
 end

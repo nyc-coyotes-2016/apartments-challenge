@@ -1,7 +1,8 @@
 require 'pry'
 
 class Room
-  attr_accessor :name, :sqft, :window_count
+  attr_accessor :name, :window_count
+  attr_reader :sqft
   def initialize(args = {})
     @name = args.fetch(:name, "bedroom")
     @sqft = args.fetch(:sqft, 120)

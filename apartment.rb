@@ -1,10 +1,11 @@
 require 'pry'
 
 class Apartment
-  attr_accessor :number, :rooms, :monthly_rent
+  attr_accessor :number, :monthly_rent
+  attr_reader :rooms
   def initialize(args = {})
     @number = args.fetch(:number, "")
-    @rooms = args.fetch(:rooms, "")
+    @rooms = args.fetch(:rooms, [])
     @monthly_rent = args.fetch(:monthly_rent, 1000)
   end
 
