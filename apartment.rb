@@ -13,9 +13,7 @@ class Apartment
   end
 
   def price_per_sqft
-    monthly_rent / self.rooms.inject(0) do |sum, room|
-      sum.to_f + room.sqft.to_f
-    end
+    monthly_rent / total_sqft.to_f
   end
 
   def room_count
