@@ -1,7 +1,7 @@
 require_relative 'room'
 
 
-class Apartment
+class Apartment 
   attr_reader :rooms, :number, :monthly_rent 
   def initialize(args = {})
     @number = args.fetch(:number, "")
