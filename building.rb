@@ -17,7 +17,7 @@ class Building
 	end 
 
 	def apartments_by_rent
-		apartments.sort { |a, b| a.monthly_rent <=> b.monthly_rent }.reverse
+		apartments.sort { |a, b| b.monthly_rent <=> a.monthly_rent }
 	end 
 
 	def find_apartments_by_bedroom_count(num_of_bedrooms)
