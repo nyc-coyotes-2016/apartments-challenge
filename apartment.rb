@@ -11,7 +11,9 @@ class Apartment
   end
 
   def total_sqft
-    
+     rooms.reduce(0) do |total, room|
+      total + room.sqft
+    end
   end
 
   def price_per_sqft
