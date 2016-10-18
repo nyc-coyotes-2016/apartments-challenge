@@ -1,4 +1,3 @@
-require 'pry'
 
 class Apartment
   attr_accessor :monthly_rent
