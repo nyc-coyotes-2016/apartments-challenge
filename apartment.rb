@@ -22,8 +22,7 @@ class Apartment
   end
 
   def bedroom_count
-    bedrooms = rooms.select { |room| "bedroom".include? room.name }
-    bedrooms.length
+    rooms.count { |room| room.name == "bedroom" }
   end
 
 end

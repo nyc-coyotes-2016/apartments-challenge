@@ -18,7 +18,13 @@ class Building
     apartments.sort  { |apt1, apt2| apt2.monthly_rent <=> apt1.monthly_rent }
   end
 
-  # def totol_room_count
-  #   apartments.reduce(0) { |sum, apartment| sum + apartment.room_count }
-  # end
+  def find_apartments_by_bedroom_count(n)
+    found = apartments.select { |apartment| apartment.bedroom_count == n }
+    return found[0] if found.length == 1
+  end
+
+  def total_sqft
+    apartments.reduce(0) { |sum, apartment| sum + apartment.total_sqft }
+  end
+
 end
