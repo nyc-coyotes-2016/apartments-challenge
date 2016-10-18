@@ -8,10 +8,6 @@ class Apartment
     @monthly_rent = args.fetch(:monthly_rent, 1000)
   end
 
-  def generate_rooms
-    # self.rooms = Rooms.new()
-  end
-
   def total_sqft
     rooms.inject(0) { |sum, room| sum + room.sqft}
   end

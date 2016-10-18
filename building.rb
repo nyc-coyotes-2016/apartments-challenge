@@ -1,16 +1,21 @@
 require 'pry'
-require_relative 'apartment'
-require_relative 'room'
 
 class Building
   attr_accessor :address, :apartments
   def initialize(args = {})
     @address = args.fetch(:address, "")
-    @apartments = args.fetch(:apartments, "")
+    @apartments = args.fetch(:apartments, Array.new)
   end
 
-  def apartments
+  def total_room_count
+    apartments.inject(0) { |sum, apt| sum + apt.room_count}
+  end
 
+  def total_monthly_revenue
+    apartments.inject(0) { |sum, rent| sum + rent.monthly_rent}
+  end
+
+  def apartments_by_rent
   end
 
 end
