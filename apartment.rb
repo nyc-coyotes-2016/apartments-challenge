@@ -17,7 +17,7 @@ class Apartment
   end
 
   def price_per_sqft
-
+    price = monthly_rent/total_sqft.to_f
   end
 
   def room_count
