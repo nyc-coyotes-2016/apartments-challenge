@@ -1,4 +1,4 @@
-require_relative 'room'
+
 
 class Apartment
 	attr_reader :monthly_rent, :rooms, :number
@@ -22,8 +22,8 @@ class Apartment
 	end 
 
 	def bedroom_count
-		bedroom_count = rooms.select { |room| room.name == 'bedroom'}
-		bedroom_count.length
+		rooms.count { |room| room.name == 'bedroom'}
+
 	end
 
 end
