@@ -1,14 +1,11 @@
-require_relative 'room'
-
 class Apartment
-	attr_accessor :rooms, :monthly_rent
+	attr_reader :rooms, :monthly_rent
 
 	def initialize(args = {})
 		@monthly_rent = args.fetch(:monthly_rent, 1000)
 		@rooms = args.fetch(:rooms,[])
 		@numbers = args.fetch(:numbers,"")
 	end
-
 
 	def price_per_sqft
 		monthly_rent.to_f/total_sqft
@@ -23,6 +20,6 @@ class Apartment
 	end
 
 	def total_sqft
-		rooms.reduce(0){|total, room| total +rooms.sqft}
+		rooms.reduce(0){|total, room| total +room.sqft}
 	end
 end
