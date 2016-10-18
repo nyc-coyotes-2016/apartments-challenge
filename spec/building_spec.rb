@@ -25,13 +25,13 @@ describe Building do
     end
   end
 
-  describe '#total_room_count' do
+  describe '#total_room_count' do #
     it 'returns total rooms in the building' do
       expect(building.total_room_count).to eq 7
     end
   end
 
-  describe '#total_monthly_revenue' do
+  describe '#total_monthly_revenue' do #
     it 'returns total monthly revenue' do
       expect(building.total_monthly_revenue).to eq 3616
     end
@@ -50,7 +50,7 @@ describe Building do
   end
 
 
-  describe '#total_sqft' do
+  describe '#total_sqft' do #
     it 'returns total sqft for all apartments in the building' do
       expect(building.total_sqft).to eq 2160
     end
