@@ -24,37 +24,37 @@ describe Building do
       expect(building.apartments).to eq apartments
     end
   end
-
-  describe '#total_room_count' do
-    it 'returns total rooms in the building' do
-      expect(building.total_room_count).to eq 7
-    end
-  end
-
-  describe '#total_monthly_revenue' do
-    it 'returns total monthly revenue' do
-      expect(building.total_monthly_revenue).to eq 3616
-    end
-  end
-
-  describe '#apartments_by_rent' do
-    it 'orders apartments by rent from largest to smallest' do
-      expect(building.apartments_by_rent).to eq [first_apartment, third_apartment, second_apartment]
-    end
-  end
-
-  describe '#find_apartments_by_bedroom_count' do
-    it 'should find apartment by input number of bedroom' do
-      expect(building.find_apartments_by_bedroom_count(1)). to eq second_apartment
-    end
-  end
-
-
-  describe '#total_sqft' do
-    it 'returns total sqft for all apartments in the building' do
-      expect(building.total_sqft).to eq 2160
-    end
-  end
+  #
+  # describe '#total_room_count' do
+  #   it 'returns total rooms in the building' do
+  #     expect(building.total_room_count).to eq 7
+  #   end
+  # end
+  #
+  # describe '#total_monthly_revenue' do
+  #   it 'returns total monthly revenue' do
+  #     expect(building.total_monthly_revenue).to eq 3616
+  #   end
+  # end
+  #
+  # describe '#apartments_by_rent' do
+  #   it 'orders apartments by rent from largest to smallest' do
+  #     expect(building.apartments_by_rent).to eq [first_apartment, third_apartment, second_apartment]
+  #   end
+  # end
+  #
+  # describe '#find_apartments_by_bedroom_count' do
+  #   it 'should find apartment by input number of bedroom' do
+  #     expect(building.find_apartments_by_bedroom_count(1)). to eq second_apartment
+  #   end
+  # end
+  #
+  #
+  # describe '#total_sqft' do
+  #   it 'returns total sqft for all apartments in the building' do
+  #     expect(building.total_sqft).to eq 2160
+  #   end
+  # end
 
 
 end
