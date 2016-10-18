@@ -1,6 +1,3 @@
-require_relative 'room'
-
-
 class Apartment 
   attr_reader :rooms, :number, :monthly_rent 
   def initialize(args = {})
@@ -25,7 +22,7 @@ class Apartment
   end
 
   def bedroom_count
-    rooms.count{|room| room == 'bedroom'}
+    rooms.count{|room| "bedroom" == room.name}
   end
 end
 

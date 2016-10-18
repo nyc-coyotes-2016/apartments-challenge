@@ -1,6 +1,3 @@
-require_relative 'apartment'
-require_relative 'room'
-
 class Building
   attr_reader :apartments
   def initialize(args = {})
